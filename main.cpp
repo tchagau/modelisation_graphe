@@ -118,11 +118,14 @@ void aff_solution(int path[])
 
 int main()
 {
-   
-  Graphe G("yu");
+  //Creattion du graphe
+  Graphe G("undirected_graph");
+
+  //Creation des differents instances de nos sommets
 	Sommet<int> s0(0),s1(1),s2(2),s3(3),s4(4),s5(5),s6(6);
   int choix,numS,num1,num2,s;
 	
+  //Ajout des sommets au graphe
   G.sommet.push_back(s0);
   G.sommet.push_back(s1);
   G.sommet.push_back(s2);
@@ -131,6 +134,7 @@ int main()
   //G.sommet.push_back(s5);
   //G.sommet.push_back(s6);
   
+  //Creation des liaisons entre les sommets
   G.add_arrete(s0.get_numS(),s1.get_numS(),2);
   G.add_arrete(s1.get_numS(),s2.get_numS(),1);
   G.add_arrete(s0.get_numS(),s3.get_numS(),5);
